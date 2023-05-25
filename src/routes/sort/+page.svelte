@@ -105,7 +105,7 @@
 <style lang="scss">
 	#sort {
 		box-sizing: border-box;
-		height: 100vh;
+		height: 100dvh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
