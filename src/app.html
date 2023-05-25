@@ -35,6 +35,7 @@
 				s.parentNode.insertBefore(tk, s);
 			})(document);
 		</script>
+		<script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
 		<style>
 			* {
 				font-family: 'nitalago-ruika', sans-serif;
@@ -44,10 +45,15 @@
 			}
 			html {
 				opacity: 0;
-				transition: .3s;
+				transition: 0.3s;
 			}
 			html.wf-active {
 				opacity: 1;
+			}
+
+			body {
+				margin: 0;
+				overflow: hidden;
 			}
 		</style>
 	</head>
