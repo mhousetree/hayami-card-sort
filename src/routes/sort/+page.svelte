@@ -13,7 +13,7 @@
 
 	const getTweetLink = (one: string, two: string, three: string) => {
 		// https://tools.ikunaga.net/tweet-link/
-		return `https://twitter.com/intent/tweet?text=%E7%A7%81%E3%81%AE%E9%80%9F%E6%B0%B4%E5%A5%8F%E3%81%95%E3%82%93%E3%81%AE%E3%82%AB%E3%83%BC%E3%83%89%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%E3%81%AF%E3%80%81%0A1.%20${one}%0A2.%20${two}%0A3.%20${three}%0A%E3%81%A7%E3%81%97%E3%81%9F%EF%BC%81%0A%0A%E9%80%9F%E6%B0%B4%E5%A5%8F%E3%81%95%E3%82%93%E3%82%AB%E3%83%BC%E3%83%89%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%82%BD%E3%83%BC%E3%83%88%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81%0Ahttps%3A%2F%2Fhayami-card-sort.vercel.app%2F`;
+		return `https://twitter.com/intent/tweet?text=%E7%A7%81%E3%81%AE%E9%80%9F%E6%B0%B4%E5%A5%8F%E3%81%95%E3%82%93%E3%81%AE%E3%82%AB%E3%83%BC%E3%83%89%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%E3%81%AF%E3%80%81%0A1.%20${one}%0A2.%20${two}%0A3.%20${three}%0A%E3%81%A7%E3%81%97%E3%81%9F%EF%BC%81%0A%0A%E9%80%9F%E6%B0%B4%E5%A5%8F%E3%81%95%E3%82%93%E3%82%AB%E3%83%BC%E3%83%89%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E3%82%BD%E3%83%BC%E3%83%88%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A7%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81%0A%23hayami_card_sort%0Ahttps%3A%2F%2Fhayami-card-sort.vercel.app%2F`;
 	};
 </script>
 
