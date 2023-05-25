@@ -93,7 +93,7 @@
 			border-radius: 4px;
 			padding: 1rem;
 			font-size: 1.2rem;
-			transition: .2s;
+			transition: 0.2s;
 
 			&:hover {
 				translate: 0 -2px;
@@ -103,7 +103,7 @@
 			h2 {
 				font-size: 1em;
 				margin: 0;
-				margin-top: .8rem;
+				margin-top: 0.8rem;
 			}
 
 			img {
