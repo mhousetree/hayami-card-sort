@@ -3,13 +3,12 @@
 	import { ssCards } from '../../data/ss';
 	import Sorter from '../../modules/Sorter';
 	const sort = new Sorter(Object.keys(ssCards));
-	// let result = sort.sort();
-	let result = true;
+	let result = sort.sort();
 
 	onMount(() => {
 		// overflow: hidden
 		// @ts-ignore
-		document.querySelector('body').style.overflow = 'scroll';
+		document.querySelector('html').style.overflow = 'scroll';
 	});
 
 	const getTweetLink = (one: string, two: string, three: string) => {
@@ -127,7 +126,7 @@
 			box-shadow: 0 2px 10px #0001;
 			border-radius: 4px;
 			padding: 1rem;
-			font-size: 2vw;
+			font-size: min(2vw, 1.2rem);
 			transition: 0.2s;
 
 			&:hover {
@@ -161,6 +160,7 @@
 
 		h1 {
 			text-align: center;
+			margin-top: 4rem;
 		}
 
 		#top3 {
@@ -319,6 +319,53 @@
 					}
 				}
 			}
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		#sort {
+			height: max-content;
+			p {
+				margin-top: 3rem;
+			}
+		}
+
+		#choices {
+			grid-template-columns: 1fr;
+			width: 80%;
+			margin: 0 auto;
+			button {
+				font-size: 14px;
+			}
+		}
+
+		#result {
+			font-size: 14px;
+
+			h1 {
+				margin-top: 3rem;
+			}
+
+			#top3 {
+				grid-template-columns: 1fr;
+
+				li:first-of-type {
+					width: 100%;
+				}
+			}
+		}
+
+		#over4 {
+			flex-direction: column;
+			align-items: center;
+
+			ol {
+				margin: 0;
+			}
+		}
+
+		#tweetbutton {
+			margin-top: 1rem;
 		}
 	}
 </style>

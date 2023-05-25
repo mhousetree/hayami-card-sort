@@ -11,7 +11,7 @@
 	onMount(() => {
 		// overflow: hidden
 		// @ts-ignore
-		document.querySelector('body').style.overflow = 'hidden';
+		document.querySelector('html').style.overflow = 'hidden';
 
 		// リサイズに対応
 		const onResize = () => {
@@ -152,9 +152,9 @@
 	<section>
 		<h1>速水奏さんカードイラストソート</h1>
 		<p>
-			速水奏さんのカードイラストを比較して、好きな方を選んでください。<br />
+			速水奏さんのカードイラストを比較して、<br class="sp-only" />好きな方を選んでください。<br />
 			最後まで遊ぶと全カードのランキングが見られます。<br />
-			あなたが速水奏さんのどんな部分が好きなのか向き合ってみましょう。
+			あなたが速水奏さんのどんな部分が好きなのか<br class="sp-only" />向き合ってみましょう。
 		</p>
 		<a href="/sort">はじめる！</a>
 	</section>
@@ -164,8 +164,10 @@
 
 	<small>
 		2023 &copy; はやかわめぐる<br />
-		当コンテンツ内の画像およびカードタイトルの著作権はゲーム提供元に帰属します。<br />
-		問題が発生した場合は速やかに当コンテンツの公開を終了します。
+		当コンテンツ内の画像およびカードタイトルの著作権は<br
+			class="sp-only"
+		/>ゲーム提供元に帰属します。<br />
+		問題が発生した場合は速やかに当コンテンツの<br class="sp-only" />公開を終了します。
 	</small>
 </div>
 
@@ -272,5 +274,33 @@
 		text-align: center;
 		width: max-content;
 		color: #888;
+	}
+
+	.sp-only {
+		display: none;
+	}
+
+	@media screen and (max-width: 700px) {
+		.sp-only {
+			display: block;
+		}
+
+		#top {
+			font-size: 14px;
+			section,
+			small {
+				width: 100%;
+			}
+
+			section {
+				h1 {
+					font-size: 1.5em;
+				}
+			}
+
+			small {
+				font-size: 0.6em;
+			}
+		}
 	}
 </style>
