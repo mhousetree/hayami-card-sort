@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import * as THREE from 'three';
 	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -10,8 +10,19 @@
 
 	onMount(() => {
 		// overflow: hidden
-		// @ts-ignore
-		document.querySelector('html').style.overflow = 'hidden';
+		document.querySelector('html')!.style.overflow = 'hidden';
+
+		document.getElementById('toggle')?.addEventListener('click', () => {
+			const targets: NodeListOf<HTMLElement> = document.querySelectorAll('.toggle-hide');
+
+			for (const target of targets) {
+				if (target.style.visibility !== 'hidden') {
+					target.style.visibility = 'hidden';
+				} else {
+					target.style.visibility = 'visible';
+				}
+			}
+		});
 
 		// リサイズに対応
 		const onResize = () => {
@@ -149,7 +160,38 @@
 </script>
 
 <div id="top">
-	<section>
+	<div id="switch">
+		<input type="checkbox" id="toggle" name="toggle" />
+		<label for="toggle">
+			<svg
+				width="125"
+				height="125"
+				viewBox="0 0 125 125"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				id="crescent"
+			>
+				<path
+					fill-rule="evenodd"
+					clip-rule="evenodd"
+					d="M29.5 95C65.6747 95 95 65.6747 95 29.5C95 19.1545 92.6015 9.36916 88.3302 0.669762C110.05 11.3336 125 33.6709 125 59.5C125 95.6747 95.6747 125 59.5 125C33.6709 125 11.3336 110.05 0.669762 88.3302C9.36916 92.6015 19.1545 95 29.5 95Z"
+					fill="white"
+				/>
+			</svg>
+			<svg
+				width="131"
+				height="131"
+				viewBox="0 0 131 131"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				id="fullmoon"
+			>
+				<circle cx="65.5" cy="65.5" r="65.5" fill="white" />
+			</svg>
+		</label>
+	</div>
+
+	<section class="toggle-hide">
 		<h1>速水奏さんカードイラストソート</h1>
 		<p>
 			速水奏さんのカードイラストを比較して、<br class="sp-only" />好きな方を選んでください。<br />
@@ -162,7 +204,7 @@
 	<canvas id="myCanvas" />
 	<div />
 
-	<small>
+	<small class="toggle-hide">
 		2023 &copy; はやかわめぐる<br />
 		当コンテンツ内の画像およびカードタイトルの著作権は<br
 			class="sp-only"
@@ -176,6 +218,50 @@
 		position: relative;
 		width: 100%;
 		height: 100dvh;
+
+		#switch {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			z-index: 2;
+			display: flex;
+
+			input {
+				width: 0;
+				height: 0;
+				opacity: 0;
+
+				&:checked + label {
+					#crescent {
+						display: none;
+					}
+					#fullmoon {
+						display: inline;
+					}
+				}
+			}
+
+			label {
+				width: 1.5rem;
+				height: 1.5rem;
+
+				svg {
+					width: 100%;
+					height: 100%;
+
+					filter: drop-shadow(0 0 10px #0006);
+				}
+			}
+
+			#crescent,
+			#fullmoon {
+				display: block;
+			}
+
+			#fullmoon {
+				display: none;
+			}
+		}
 
 		section {
 			position: absolute;
@@ -261,6 +347,7 @@
 			width: 100vw;
 			height: 100dvh;
 			background: radial-gradient(transparent 50%, #ccc);
+			pointer-events: none;
 		}
 	}
 
