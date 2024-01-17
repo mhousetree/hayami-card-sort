@@ -1,4 +1,4 @@
-export const ssCards: {[key: string]: string} = {
+export const ssCards: { [key: string]: string } = {
 	r: '速水奏',
 	r_p: '速水奏＋',
 	souyoku: '[蒼翼の乙女]速水奏',
@@ -29,4 +29,6 @@ export const ssCards: {[key: string]: string} = {
 	saihate_p: '[サイハテに咲く鏡花]速水奏＋',
 	nightwear: '[Nightwear]速水奏',
 	nightwear_p: '[Nightwear]速水奏＋',
-}
+	dlg: "[D-ark L-ily's Grin]速水奏",
+	dlg_p: "[D-ark L-ily's Grin]速水奏＋"
+};
