@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@sveltejs/vite-plugin-svelte':
+        specifier: ^7.3.1
+        version: 7.3.1(svelte@4.2.20)(vite@8.3.1(sass@1.105.1))
       sass:
         specifier: ^1.62.1
         version: 1.105.1
