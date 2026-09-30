@@ -30,5 +30,9 @@ export const ssCards: { [key: string]: string } = {
 	nightwear: '[Nightwear]速水奏',
 	nightwear_p: '[Nightwear]速水奏＋',
 	dlg: "[D-ark L-ily's Grin]速水奏",
-	dlg_p: "[D-ark L-ily's Grin]速水奏＋"
+	dlg_p: "[D-ark L-ily's Grin]速水奏＋",
+	clearblue: '[クリアブルーに誘われて]速水奏',
+	clearblue_p: '[クリアブルーに誘われて]速水奏＋',
+	nox: '[ノクス・グロリア]速水奏',
+	nox_p: '[ノクス・グロリア]速水奏＋'
 };
