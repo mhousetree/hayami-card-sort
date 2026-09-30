@@ -205,7 +205,7 @@
 	<div />
 
 	<small class="toggle-hide">
-		2023 &copy; はやかわめぐる<br />
+		2023-2026 &copy; はやかわめぐる<br />
 		当コンテンツ内の画像およびカードタイトルの著作権は<br
 			class="sp-only"
 		/>ゲーム提供元に帰属します。<br />
